@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el Nombre del Personaje de Los Simpsons</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <h1>Adivina el Nombre del Personaje de Los Simpsons</h1>
+    <img src="<%= personaje.image %>" alt="Imagen del Personaje">
+    <p>"<%= personaje.quote %>"</p>
+    <form action="/adivinar" method="POST">
+        <label for="nombreUsuario">Conoces el nombre del personaje? Intenta adivinarlo:</label><br>
+        <input type="text" id="nombreUsuario" name="nombreUsuario" required><br>
+        <input type="hidden" name="nombrePersonaje" value="<%= personaje.character %>">
+        <button type="submit">Adivinar</button>
+    </form>
+</body>
+</html>
