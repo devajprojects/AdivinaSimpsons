@@ -4,9 +4,6 @@ const simpsonsController = require('./controllers/simpsonsController');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 
-// Configurar el motor de plantillas EJS
-app.set('view engine', 'ejs');
-
 // Configurar body-parser para analizar los datos del cuerpo de la solicitud
 app.use(bodyParser.urlencoded({ extended: true }));
 
